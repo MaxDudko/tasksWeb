@@ -39,21 +39,30 @@ let calcPointTime = (distance, speed) => {
 for(let i = 0; i <= distance.length; i++) {
   calcPointTime(distance[i], pointsArr[i][2]);
 }
-
+let position = [];
 let findPosition = (t) => {
   let timeHasPassed = 0;
-  let lastPoint;
+  let lastPointStart;
+  let lastPointEnd;
   let lastPointTime;
+  let lastPointDistance;
+  let lastPointDistanceAll;
   for(let i = 0; i < pointTime.length-1; i++) {
     timeHasPassed += pointTime[i];
     if(timeHasPassed >= t) { 
-      lastPoint = pointsArr[i];
+      lastPointStart = pointsArr[i];
+      lastPointEnd = pointsArr[i+1];
+      lastPointDistanceAll= distance[i];
       break
     } 
   }
   lastPointTime = timeHasPassed - t;
-  
-  console.log(timeHasPassed, lastPoint, lastPointTime)
+  lastPointDistance = lastPointStart[2] * lastPointTime;
+  let pointX = (lastPointStart[0] + lastPointEnd[0])/ (lastPointDistance / lastPointDistanceAll);
+  let pointY = (lastPointStart[1] + lastPointEnd[1])/ (lastPointDistance / lastPointDistanceAll);
+  console.log('X: ' + pointX, 'Y: ' + pointY);
+  position.push(pointX);
+  position.push(pointY);
 }
 
 

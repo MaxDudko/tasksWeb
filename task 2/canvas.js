@@ -20,6 +20,7 @@ for(let y = 0; y <= 700; y += 100) {
 }
 
 let route = (pointStart, pointEnd, i) => {
+  if(pointEnd == undefined) pointEnd = pointStart;
   ctx.beginPath();
   ctx.moveTo(pointStart[0], pointStart[1]);
   ctx.font = "15px Merienda";
@@ -36,3 +37,11 @@ let route = (pointStart, pointEnd, i) => {
 for(let i = 0; i <= pointsArr.length - 1; i++) {
   route(pointsArr[i], pointsArr[i + 1], i);
 }
+
+let input = document.getElementById('input').value;
+let output = document.getElementById('output');
+document.getElementById('submint').addEventListener('click', () => {
+    findPosition(input);
+    output.value = `X: ${position[0]} Y: ${position[1]}`;
+    ctx.fillRect(position[0],position[1],2,2);
+});
