@@ -1,0 +1,20 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #006e2e 0%,#006e2e 100%);
+  position: fixed;
+}
+.element {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(ellipse at center, #fcfff4 0%,#dfe5d7 40%,#b3bead 100%);
+  transition: all 0.07s linear 0s;
+  box-shadow: 1px 1px 10px #000000;
+  position: absolute;
+  left: 50%;
+}
+

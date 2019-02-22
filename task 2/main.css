@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #808080;
+}
+.container {
+  display: flex;
+  justify-content: start;
+}
+.grid {
+  border: 1px solid #00FF00;
+}
+.result {
+  border: 1px solid #00FF00;
+  min-width: 30%;
+}
