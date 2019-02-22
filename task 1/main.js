@@ -17,19 +17,4 @@ container.onmousemove = (e) => {
     changePosition(e, element); 
   
 };
-
-
-/*
-function newPosition (oldTop, oldLeft, width, height) {
-    var range = 20; // Тут выставьте свой минимальный диапазон дальности
-    var newTop = getRandomInt(0, height);
-    var newLeft = getRandomInt(0, width);
-    if ( ((oldTop-range)<newTop && (oldTop+range)>newTop) ||
-         ((oldLeft-range)<newLeft && (oldLeft+range)>newLeft)) 
-       return newPosition (oldTop, oldLeft, width, height);
-    else return [newTop, newLeft];
-}
-
-  var buttonPosition = newPosition (element.style.top, element.style.left); 
-  */
   
